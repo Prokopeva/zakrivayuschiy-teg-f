@@ -13,4 +13,232 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--font-main);
+  font-variation-settings: "wght" var(--font-weight-card-body);
+  background-image: var(--background-gradient);
+  background-attachment: fixed;
+  background-size: cover;
+  display: grid;
+  justify-items: center;
+  padding: 100px 0;
+  gap: 98px;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  justify-items: center;
+  border: 2px solid #000;
+  background-color: #fff;
+  inline-size: min(100%, 700px);
+  padding: clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem) 0;
+  gap: 20px;
+}
+
+.header_title {
+  font-family: var(--font-accent);
+  font-weight: 400;
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+}
+
+.header_text {
+  font-family: var(--font-accent);
+  font-weight: 400;
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  text-transform: uppercase;
+}
+
+.main {
+  inline-size: min(100%, 700px);
+  display: grid;
+  gap: 50px;
+}
+
+.card_list {
+  display: grid;
+  gap: 50px;
+}
+
+.card {
+  border: 2px solid #000;
+}
+
+.card_title {
+  font-family: var(--font-main);
+  background-color: #fff;
+  font-variation-settings: 'wght' var(--font-weight-card-title);
+  padding: 4px 10px;
+  font-size: 18px;
+}
+
+.image_container {
+  max-block-size: max-content;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+  position: relative;
+}
+
+.image_container img{
+  inline-size: 100%;
+  aspect-ratio: 1 / 1;
+  display: block;
+  object-fit: cover;
+}
+
+.brightness {
+  filter: brightness(0.5);
+}
+
+.contrast {
+  filter: contrast(20%);
+}
+
+.blur {
+  filter: blur(0.5rem);
+}
+
+.opacity {
+  filter: opacity(0.8);
+}
+
+.grayscale {
+  filter: grayscale(0.8);
+}
+
+.saturate {
+  filter: saturate(58%);
+}
+
+.hue-rotate {
+  filter: hue-rotate(-90deg) invert(0.7);
+}
+
+.sepia {
+  filter: sepia(80%);
+}
+
+.label {
+  font-family: var(--font-accent);
+  font-weight: 400;
+  font-size: 14px;
+  position: absolute;
+  inset-inline-end: 25px;
+  inset-block-start: 25px;
+  mix-blend-mode: hard-light;
+  opacity: 0.5;
+  text-shadow:
+  -1px 0 var(--text-outline-color),
+  0 1px var(--text-outline-color),
+  1px 0 var(--text-outline-color),
+  0 -1px var(--text-outline-color);
+}
+
+@supports((text-stroke: 1px var(--text-outline-color)) or (-webkit-text-stroke: 1px var(--text-outline-color))) {
+  .label {
+    -webkit-text-stroke: 1px var(--text-outline-color);
+    text-stroke: 1px var(--text-outline-color);
+    text-shadow: none;
+  }
+}
+
+.card_content {
+  padding: 25px;
+  background-color: #fff;
+  display: grid;
+  gap: 25px;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.like {
+  justify-self: end;
+  display: flex;
+  gap: 7px;
+}
+
+.card__icon-button {
+  background-color: transparent;
+  border: none;
+  align-self: center;
+  cursor: pointer;
+  inline-size: 38px;
+  block-size: 38px;
+}
+
+.button {
+  background-color: transparent;
+  border: 2px solid #000;
+  cursor: pointer;
+  font-family: var(--font-accent);
+  font-size: 14px;
+  font-weight: 400;
+  /* line-height: 90%; */
+}
+
+.card__like-button {
+  min-inline-size: 130px;
+  min-block-size: 38px;
+}
+
+.save_button {
+  background-color: #fff;
+  justify-self: center;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 18px;
+}
+
+.save_button svg {
+  inline-size: 21px;
+  block-size: 21px;
+}
+
+#dialog::backdrop {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+#dialog[open] {
+  display: grid;
+  grid-template-areas:
+    "icon text"
+    "button button";
+  row-gap: 30px;
+  column-gap: 20px;
+  align-items: center;
+  padding: 28px;
+  max-inline-size: 353px;
+}
+
+#dialog svg {
+  inline-size: 39px;
+  block-size: 39px;
+  grid-area: icon;
+}
+
+.dialog_text {
+  grid-area: text;
+  font-family: var(--font-accent);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%;
+  text-transform: uppercase;
+}
+
+.dialog_close-button {
+  grid-area: button;
+  block-size: 38px;
+}
+
+@media (width <= 375px) {
+  .save_button {
+    flex-direction: column;
+  }
+
+  .save_button svg {
+    inline-size: 28px;
+    block-size: 28px;
+  }
 }
