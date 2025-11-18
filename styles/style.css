@@ -79,7 +79,7 @@
   max-block-size: max-content;
 }
 
-.image_container img{
+.image_container img {
   display: block;
   object-fit: cover;
   inline-size: 100%;
@@ -170,7 +170,7 @@
   block-size: 36px;
 }
 
-.card__icon-button svg{
+.card__icon-button svg {
   justify-self: center;
   align-self: center;
   inline-size: 39px;
@@ -215,7 +215,7 @@
   fill: var(--color-animation-fill);
 }
 
-.like-icon.is-liked .core{
+.like-icon.is-liked .core {
   --animation-fill-color: #f00;
   fill: var(--animation-fill-color);
   transition-delay: 0s;

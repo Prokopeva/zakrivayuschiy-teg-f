@@ -1,7 +1,7 @@
 /* В этом файле вы импортируете все шрифты для сайта. Один из них вариативный и требует особенной настройки */
 @font-face {
   font-display: swap;
-   font-weight: 410 715;
+   font-weight: 400 785;
   font-family: 'Inter';
   src:
     url('./Inter-Variable.woff2') format('woff2 supports variations'),
