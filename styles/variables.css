@@ -12,7 +12,7 @@
     to bottom, 
     #d3d3d3 0, 
     #d3d3d3 2px, 
-    transparent 2px, 
+    transparent 2px,
     transparent 4px
   ),
   linear-gradient(
@@ -28,5 +28,10 @@
   --font-weight-card-body: 410;
   --font-weight-card-title: 715;
 
-  --text-outline-color: #fff;
+  --main-color: #fff;
+  --accent-color: #000;
+  --color-contour: #000;
+  --color-sparks: #f00;
+  --color-core: transparent;
+  --color-animation-fill: transparent;
 }
