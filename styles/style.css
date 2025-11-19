@@ -158,7 +158,7 @@
 }
 
 .card__icon-button {
-  display: grid;
+  display: flex;
   align-self: center;
   border: 2px solid transparent;
   padding: 0;
@@ -166,15 +166,12 @@
   background-color: transparent;
   transition: border-color 0.3s ease;
   cursor: pointer;
-  inline-size: 39px;
-  block-size: 36px;
-}
+}   
 
 .card__icon-button svg {
-  justify-self: center;
-  align-self: center;
-  inline-size: 39px;
-  block-size: 36px;
+  margin: auto;
+  inline-size: 38px;
+  block-size: 38px;
 }
 
 .card__icon-button:focus {
@@ -233,12 +230,12 @@
   transition: fill 0.3s linear 0.06s;
 }
 
-.like-icon .heart {
+.like-icon {
   transform-origin: center;
 }
 
-.like-icon.is-liked .heart {
-  animation: heart-scale 0.3s ease-in 0.1s forwards;
+.like-icon.is-liked {
+  animation: heart-scale 0.3s ease-in 0.1s backwards;
 }
 
 .like-icon.is-liked .sparks {
@@ -317,6 +314,7 @@
   align-items: center;
   row-gap: 30px;
   column-gap: 20px;
+  border: 2px solid var(--accent-color);
   padding: 28px;
   max-inline-size: 353px;
 }
@@ -349,5 +347,12 @@
   .save_button svg {
     inline-size: 28px;
     block-size: 28px;
+  }
+
+  #dialog[open] {
+    row-gap: 30px;
+    column-gap: 20px;
+    padding: 28px 38px;
+    max-inline-size: 341px;
   }
 }
